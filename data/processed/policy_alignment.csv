@@ -1,0 +1,51 @@
+﻿policy_n,sector,source,span,sign,lag,best_group,r,mode,n_ptei,display_label
+1,반도체,llm_market_response,1,1,0,KOSPI·대기업,0.4182,direction,1050,LLM 시장반응 신호
+2,반도체,llm_market_response,1,1,0,KOSPI·소기업,0.732,direction,1404,LLM 시장반응 신호
+3,반도체,llm_market_response,1,1,0,KOSPI·중견,0.6318,direction,5695,LLM 시장반응 신호
+4,반도체,llm_market_response,1,1,0,KOSDAQ·소기업,0.7917,direction,1413,LLM 시장반응 신호
+5,반도체,llm_market_response,1,1,0,KOSPI·중견,0.7433,direction,1492,LLM 시장반응 신호
+6,반도체,llm_market_response,1,1,0,KOSDAQ·소기업,0.8493,direction,1803,LLM 시장반응 신호
+7,반도체,llm_market_response,1,1,0,KOSDAQ·대기업,0.6277,direction,1088,LLM 시장반응 신호
+8,반도체,llm_market_response,1,1,0,KOSDAQ·대기업,0.9415,direction,2232,LLM 시장반응 신호
+9,반도체,llm_market_response,1,1,0,KOSDAQ·소기업,0.6964,direction,1031,LLM 시장반응 신호
+10,반도체,llm_market_response,1,1,0,KOSDAQ·대기업,0.7523,direction,1326,LLM 시장반응 신호
+11,금융/증권,llm_market_response,1,1,20,KOSDAQ·대기업,0.6547,direction,1770,LLM 시장반응 신호
+12,금융/증권,llm_market_response,1,1,20,KOSDAQ·대기업,0.8331,direction,2150,LLM 시장반응 신호
+13,금융/증권,llm_market_response,1,1,20,KOSPI·대기업,0.8916,direction,3291,LLM 시장반응 신호
+14,금융/증권,llm_market_response,1,1,20,KOSDAQ·중견,0.819,direction,2354,LLM 시장반응 신호
+15,금융/증권,llm_market_response,1,1,20,KOSDAQ·대기업,0.4898,direction,4335,LLM 시장반응 신호
+16,금융/증권,llm_market_response,1,1,20,KOSPI·소기업,0.8054,direction,2342,LLM 시장반응 신호
+17,금융/증권,llm_market_response,1,1,20,KOSDAQ·중견,0.9578,direction,2684,LLM 시장반응 신호
+18,금융/증권,llm_market_response,1,1,20,KOSPI·대기업,0.803,direction,1449,LLM 시장반응 신호
+19,금융/증권,llm_market_response,1,1,20,KOSDAQ·대기업,0.5666,direction,1441,LLM 시장반응 신호
+20,금융/증권,llm_market_response,1,1,20,KOSDAQ·대기업,0.4071,direction,1490,LLM 시장반응 신호
+21,부동산/건설,llm_ptei_composite,1,1,0,KOSPI·중견,0.7485,direction,1519,복합 정책반응 신호
+22,부동산/건설,llm_ptei_composite,1,1,0,KOSPI·대기업,0.4394,direction,1008,복합 정책반응 신호
+23,부동산/건설,llm_ptei_composite,1,1,0,KOSPI·소기업,0.9589,direction,2383,복합 정책반응 신호
+24,부동산/건설,llm_ptei_composite,1,1,0,KOSPI·소기업,0.4843,direction,1142,복합 정책반응 신호
+25,부동산/건설,llm_ptei_composite,1,1,0,KOSDAQ·중견,0.6134,direction,2766,복합 정책반응 신호
+26,부동산/건설,llm_ptei_composite,1,1,0,KOSPI·중견,0.9347,direction,2756,복합 정책반응 신호
+27,부동산/건설,llm_ptei_composite,1,1,0,KOSDAQ·중견,0.5247,direction,1251,복합 정책반응 신호
+28,부동산/건설,llm_ptei_composite,1,1,0,KOSDAQ·소기업,0.7761,direction,2881,복합 정책반응 신호
+29,부동산/건설,llm_ptei_composite,1,1,0,KOSDAQ·소기업,0.7815,direction,1953,복합 정책반응 신호
+30,부동산/건설,llm_ptei_composite,1,1,0,KOSPI·대기업,0.9058,direction,3294,복합 정책반응 신호
+31,바이오/제약,ptei_policy_acceptance,1,1,10,KOSPI·소기업,0.8239,direction,3263,PTEI 정책수용 신호
+32,바이오/제약,ptei_policy_acceptance,1,1,10,KOSDAQ·소기업,0.8587,direction,3755,PTEI 정책수용 신호
+33,바이오/제약,ptei_policy_acceptance,1,1,10,KOSPI·대기업,0.069,direction,2101,PTEI 정책수용 신호
+34,바이오/제약,ptei_policy_acceptance,1,1,10,KOSDAQ·대기업,0.6985,direction,1460,PTEI 정책수용 신호
+35,바이오/제약,ptei_policy_acceptance,1,1,10,KOSPI·중견,0.9402,direction,5598,PTEI 정책수용 신호
+36,바이오/제약,ptei_policy_acceptance,1,1,10,KOSDAQ·대기업,0.1221,direction,2339,PTEI 정책수용 신호
+37,바이오/제약,ptei_policy_acceptance,1,1,10,KOSPI·중견,0.8527,direction,1071,PTEI 정책수용 신호
+38,바이오/제약,ptei_policy_acceptance,1,1,10,KOSDAQ·소기업,0.7482,direction,4519,PTEI 정책수용 신호
+39,바이오/제약,ptei_policy_acceptance,1,1,10,KOSDAQ·대기업,0.8451,direction,8272,PTEI 정책수용 신호
+40,바이오/제약,ptei_policy_acceptance,1,1,10,KOSPI·대기업,0.6764,direction,7044,PTEI 정책수용 신호
+41,2차전지/에너지,llm_transition_response,1,1,20,KOSDAQ·소기업,0.9446,direction,3942,LLM 정책전환 반응 신호
+42,2차전지/에너지,llm_transition_response,1,1,20,KOSDAQ·소기업,0.9174,direction,1036,LLM 정책전환 반응 신호
+43,2차전지/에너지,llm_transition_response,1,1,20,KOSPI·소기업,0.9072,direction,1802,LLM 정책전환 반응 신호
+44,2차전지/에너지,llm_transition_response,1,1,20,KOSDAQ·대기업,0.4685,direction,1485,LLM 정책전환 반응 신호
+45,2차전지/에너지,llm_transition_response,1,1,20,KOSDAQ·소기업,0.8426,direction,1204,LLM 정책전환 반응 신호
+46,2차전지/에너지,llm_transition_response,1,1,20,KOSPI·대기업,0.3057,direction,1325,LLM 정책전환 반응 신호
+47,2차전지/에너지,llm_transition_response,1,1,20,KOSDAQ·대기업,0.8391,direction,1145,LLM 정책전환 반응 신호
+48,2차전지/에너지,llm_transition_response,1,1,20,KOSPI·대기업,0.8372,direction,1407,LLM 정책전환 반응 신호
+49,2차전지/에너지,llm_transition_response,1,1,20,KOSPI·대기업,0.8464,direction,1229,LLM 정책전환 반응 신호
+50,2차전지/에너지,llm_transition_response,1,1,20,KOSDAQ·소기업,0.1834,direction,5164,LLM 정책전환 반응 신호

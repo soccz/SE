@@ -1,0 +1,47 @@
+[
+  {
+    "sector": "2차전지/에너지",
+    "source": "llm_transition_response",
+    "label": "LLM 정책전환 반응 신호",
+    "span": 1,
+    "lag": 20,
+    "n_policy": 10,
+    "display_label": "LLM 정책전환 반응 신호"
+  },
+  {
+    "sector": "금융/증권",
+    "source": "llm_market_response",
+    "label": "LLM 시장반응 신호",
+    "span": 1,
+    "lag": 20,
+    "n_policy": 10,
+    "display_label": "LLM 시장반응 신호"
+  },
+  {
+    "sector": "바이오/제약",
+    "source": "ptei_policy_acceptance",
+    "label": "PTEI 정책수용 신호",
+    "span": 1,
+    "lag": 10,
+    "n_policy": 10,
+    "display_label": "PTEI 정책수용 신호"
+  },
+  {
+    "sector": "반도체",
+    "source": "llm_market_response",
+    "label": "LLM 시장반응 신호",
+    "span": 1,
+    "lag": 0,
+    "n_policy": 10,
+    "display_label": "LLM 시장반응 신호"
+  },
+  {
+    "sector": "부동산/건설",
+    "source": "llm_ptei_composite",
+    "label": "복합 정책반응 신호",
+    "span": 1,
+    "lag": 0,
+    "n_policy": 10,
+    "display_label": "복합 정책반응 신호"
+  }
+]

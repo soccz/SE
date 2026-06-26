@@ -1,0 +1,6 @@
+﻿sector,source,label,span,lag,n_policy,display_label
+2차전지/에너지,llm_transition_response,LLM 정책전환 반응 신호,1,20,10,LLM 정책전환 반응 신호
+금융/증권,llm_market_response,LLM 시장반응 신호,1,20,10,LLM 시장반응 신호
+바이오/제약,ptei_policy_acceptance,PTEI 정책수용 신호,1,10,10,PTEI 정책수용 신호
+반도체,llm_market_response,LLM 시장반응 신호,1,0,10,LLM 시장반응 신호
+부동산/건설,llm_ptei_composite,복합 정책반응 신호,1,0,10,복합 정책반응 신호

@@ -1,0 +1,109 @@
+# Seoul Economic Policy News Dataset
+
+서울경제 「정책 뉴스의 힘 - 50대 정책」 인터랙티브 페이지 제작을 위한 공개용 결과 패키지입니다.
+
+이 저장소는 프론트엔드 애플리케이션 자체가 아니라, 홈페이지 제작자가 바로 사용할 수 있는 데이터, 분석 방법, 결과 요약, 시각화 설계 지침을 제공합니다. 구성 방향은 [`whchoi98/ontology-for-assembly`](https://github.com/whchoi98/ontology-for-assembly)와 데모 사이트 [`assembly.whchoi.net`](https://assembly.whchoi.net/)처럼 데이터 중심 프로젝트를 README와 문서로 설명하고, 웹 화면은 카드/탭/상세 패널로 확장할 수 있게 하는 방식입니다.
+
+## 핵심 메시지
+
+- 정책 50건을 5개 섹터로 분류하고, 섹터별 10개 정책을 동일한 형식으로 정리했습니다.
+- 정책 관련 뉴스 121,954건을 활용했고, LLM 점수 가용 기사 118,602건을 분석했습니다.
+- 정책별 NLP 흐름과 정책주 초과수익 CAR의 정합 판정은 50개 정책 모두에서 확인됩니다.
+- 평균 정합 상관계수는 `r = 0.706`입니다.
+- 웹 구현에 필요한 핵심 데이터는 `data/processed/web_payload.json` 하나로도 로드할 수 있습니다.
+
+## 바로 쓰는 파일
+
+| 목적 | 파일 |
+| --- | --- |
+| 웹 통합 payload | [`data/processed/web_payload.json`](data/processed/web_payload.json) |
+| 정책별 정합 판정 | [`data/processed/policy_alignment_status.csv`](data/processed/policy_alignment_status.csv) |
+| 정책별 정합 메타 | [`data/processed/policy_alignment.csv`](data/processed/policy_alignment.csv) |
+| 차트 시계열 | [`data/processed/plot_series.csv`](data/processed/plot_series.csv) |
+| 섹터별 분석 기준 | [`data/processed/sector_recipe.csv`](data/processed/sector_recipe.csv) |
+| 결과 그림 | [`assets/figures/`](assets/figures/) |
+| 제출용 보고서 | [`reports/seoul_economic_policy_news_external_report.docx`](reports/seoul_economic_policy_news_external_report.docx) |
+| 기존 HTML 참고본 | [`reference/policy_nlp_car_demo.html`](reference/policy_nlp_car_demo.html) |
+
+## 저장소 구조
+
+```text
+.
+├── README.md
+├── data/
+│   ├── README.md
+│   └── processed/
+│       ├── web_payload.json
+│       ├── policy_alignment_status.csv/json
+│       ├── policy_alignment.csv/json
+│       ├── sector_recipe.csv/json
+│       └── plot_series.csv/json
+├── docs/
+│   ├── data-dictionary.md
+│   ├── frontend-brief.md
+│   ├── methodology.md
+│   ├── results-summary.md
+│   └── reproducibility.md
+├── assets/
+│   ├── README.md
+│   └── figures/
+├── reports/
+│   ├── README.md
+│   └── seoul_economic_policy_news_external_report.docx
+├── reference/
+│   ├── README.md
+│   └── policy_nlp_car_demo.html
+└── scripts/
+    └── validate_data.py
+```
+
+## 홈페이지 제작 방향
+
+첫 화면은 `assembly.whchoi.net`처럼 좌측 탐색 또는 상단 탭으로 섹터를 나누고, 본문에는 KPI 카드와 정책 카드 목록을 배치하는 방식을 권장합니다.
+
+권장 화면:
+
+1. **Overview**: 정책 50건, 뉴스 121,954건, 평균 `r=0.706`, 정합 확인 50/50.
+2. **Sector Tabs**: 반도체, 금융/증권, 바이오/제약, 부동산/건설, 2차전지/에너지.
+3. **Policy Cards**: 정책명, 기준 신호, lag, 선택 주식그룹, 기사수, `r`, 정합 판정.
+4. **Policy Detail**: NLP 누적흐름과 CAR 이중축 라인 차트.
+5. **Methods**: 섹터별 NLP 기준, CAR 계산, 그레인저 선행성 검정 체계.
+
+자세한 구현 지침은 [`docs/frontend-brief.md`](docs/frontend-brief.md)를 기준으로 보세요.
+
+## 주요 결과
+
+| 항목 | 값 |
+| --- | ---: |
+| 정책 수 | 50 |
+| 섹터 수 | 5 |
+| 뉴스 기사 수 | 121,954 |
+| LLM 점수 가용 기사 수 | 118,602 |
+| 정책별 정합 확인 | 50/50 |
+| 평균 정합 r | 0.706 |
+| 차트 시계열 행 수 | 7,139 |
+
+섹터별 요약과 정책별 판정은 [`docs/results-summary.md`](docs/results-summary.md)를 확인하세요.
+
+## 데이터 사용 순서
+
+프론트엔드에서는 아래 순서로 연결하면 됩니다.
+
+1. `web_payload.json` 로드
+2. `sector_recipe`로 섹터 탭과 신호 설명 구성
+3. `policy_alignment_status`로 정책 카드 구성
+4. `plot_series`에서 선택 정책의 `policy_n` 기준으로 `nlp`와 `car` 라인 분리
+5. 상세 카드에 `policy_alignment`의 `best_group`, `lag`, `r` 표시
+
+## 검증
+
+```bash
+python3 scripts/validate_data.py
+```
+
+검증 스크립트는 핵심 파일 존재 여부, 행 수, 정책 수, 섹터 수, `web_payload.json` 키 구조를 확인합니다.
+
+## 주의
+
+이 저장소에는 웹 제작에 필요한 최종 산출 데이터만 포함합니다. 기사 원문, 원천 주가 데이터, 내부 검토용 스크립트 및 계약 문서는 포함하지 않습니다.
+

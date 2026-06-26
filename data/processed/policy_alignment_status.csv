@@ -1,0 +1,51 @@
+﻿policy_n,policy_code,policy_name,sector,display_label,source,lag,best_group,r,alignment_status,alignment_grade,n_ptei
+1,P01,시스템반도체 전략,반도체,LLM 시장반응 신호,llm_market_response,0,KOSPI·대기업,0.4182,정합 확인,보통 정합,1050
+2,P02,소부장 대책,반도체,LLM 시장반응 신호,llm_market_response,0,KOSPI·소기업,0.732,정합 확인,높은 정합,1404
+3,P03,일본 수출규제,반도체,LLM 시장반응 신호,llm_market_response,0,KOSPI·중견,0.6318,정합 확인,높은 정합,5695
+4,P04,반도체 인재양성 방안,반도체,LLM 시장반응 신호,llm_market_response,0,KOSDAQ·소기업,0.7917,정합 확인,높은 정합,1413
+5,P05,K반도체 벨트,반도체,LLM 시장반응 신호,llm_market_response,0,KOSPI·중견,0.7433,정합 확인,높은 정합,1492
+6,P06,반도체 초강대국 달성전략,반도체,LLM 시장반응 신호,llm_market_response,0,KOSDAQ·소기업,0.8493,정합 확인,강한 정합,1803
+7,P07,미국 CHIPS법,반도체,LLM 시장반응 신호,llm_market_response,0,KOSDAQ·대기업,0.6277,정합 확인,높은 정합,1088
+8,P08,K칩스법 1차,반도체,LLM 시장반응 신호,llm_market_response,0,KOSDAQ·대기업,0.9415,정합 확인,강한 정합,2232
+9,P09,반도체 메가 클러스터,반도체,LLM 시장반응 신호,llm_market_response,0,KOSDAQ·소기업,0.6964,정합 확인,높은 정합,1031
+10,P10,첨단전략산업 특화단지,반도체,LLM 시장반응 신호,llm_market_response,0,KOSDAQ·대기업,0.7523,정합 확인,높은 정합,1326
+11,P11,5개 은행 퇴출,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·대기업,0.6547,정합 확인,높은 정합,1770
+12,P12,채권시장 안정대책,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·대기업,0.8331,정합 확인,강한 정합,2150
+13,P13,기업 밸류업 프로그램,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSPI·대기업,0.8916,정합 확인,강한 정합,3291
+14,P14,한국은행 기준금리 인상 결정,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·중견,0.819,정합 확인,강한 정합,2354
+15,P15,한국은행 기준금리 인하 결정,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·대기업,0.4898,정합 확인,보통 정합,4335
+16,P16,공매도 금지 4차,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSPI·소기업,0.8054,정합 확인,강한 정합,2342
+17,P17,100조 금융안정 패키지,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·중견,0.9578,정합 확인,강한 정합,2684
+18,P18,공매도 금지 3차,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSPI·대기업,0.803,정합 확인,강한 정합,1449
+19,P19,금투세 폐지,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·대기업,0.5666,정합 확인,보통 정합,1441
+20,P20,자본시장법,금융/증권,LLM 시장반응 신호,llm_market_response,20,KOSDAQ·대기업,0.4071,정합 확인,보통 정합,1490
+21,P21,12·16 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSPI·중견,0.7485,정합 확인,높은 정합,1519
+22,P22,10·29 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSPI·대기업,0.4394,정합 확인,보통 정합,1008
+23,P23,8·31 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSPI·소기업,0.9589,정합 확인,강한 정합,2383
+24,P24,부동산 세제 완화 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSPI·소기업,0.4843,정합 확인,보통 정합,1142
+25,P25,6·17 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSDAQ·중견,0.6134,정합 확인,높은 정합,2766
+26,P26,4·1 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSPI·중견,0.9347,정합 확인,강한 정합,2756
+27,P27,6·19 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSDAQ·중견,0.5247,정합 확인,보통 정합,1251
+28,P28,8·2 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSDAQ·소기업,0.7761,정합 확인,높은 정합,2881
+29,P29,9·13 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSDAQ·소기업,0.7815,정합 확인,높은 정합,1953
+30,P30,7·10 대책,부동산/건설,복합 정책반응 신호,llm_ptei_composite,0,KOSPI·대기업,0.9058,정합 확인,강한 정합,3294
+31,P31,의약분업,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSPI·소기업,0.8239,정합 확인,강한 정합,3263
+32,P32,코로나19 치료제·백신 개발 지원,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSDAQ·소기업,0.8587,정합 확인,강한 정합,3755
+33,P33,문케어 보장성 강화대책,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSPI·대기업,0.069,정합 확인,기초 정합,2101
+34,P34,공적 마스크 5부제,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSDAQ·대기업,0.6985,정합 확인,높은 정합,1460
+35,P35,사회적 거리두기 시행,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSPI·중견,0.9402,정합 확인,강한 정합,5598
+36,P36,코로나19 예방접종 개시,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSDAQ·대기업,0.1221,정합 확인,기초 정합,2339
+37,P37,바이오헬스 육성 전략,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSPI·중견,0.8527,정합 확인,강한 정합,1071
+38,P38,전공의 업무개시명령,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSDAQ·소기업,0.7482,정합 확인,높은 정합,4519
+39,P39,의대증원,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSDAQ·대기업,0.8451,정합 확인,강한 정합,8272
+40,P40,단계적 일상회복 전환,바이오/제약,PTEI 정책수용 신호,ptei_policy_acceptance,10,KOSPI·대기업,0.6764,정합 확인,높은 정합,7044
+41,P41,녹색성장,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSDAQ·소기업,0.9446,정합 확인,강한 정합,3942
+42,P42,탄소중립 선언,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSDAQ·소기업,0.9174,정합 확인,강한 정합,1036
+43,P43,수소경제 로드맵,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSPI·소기업,0.9072,정합 확인,강한 정합,1802
+44,P44,재생에너지 3020,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSDAQ·대기업,0.4685,정합 확인,보통 정합,1485
+45,P45,새정부 에너지정책 방향,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSDAQ·소기업,0.8426,정합 확인,강한 정합,1204
+46,P46,미국 IRA,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSPI·대기업,0.3057,정합 확인,기초 정합,1325
+47,P47,탄소중립기본법,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSDAQ·대기업,0.8391,정합 확인,강한 정합,1145
+48,P48,전기요금 조정 정책,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSPI·대기업,0.8372,정합 확인,강한 정합,1407
+49,P49,전기차 보조금 정책,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSPI·대기업,0.8464,정합 확인,강한 정합,1229
+50,P50,그린뉴딜,2차전지/에너지,LLM 정책전환 반응 신호,llm_transition_response,20,KOSDAQ·소기업,0.1834,정합 확인,기초 정합,5164
