@@ -4,17 +4,39 @@
 
 처음 보는 사람은 `web_payload.json`만 먼저 보면 됩니다. 이 파일 안에 섹터 기준, 정책 카드 데이터, 차트 데이터가 모두 들어 있습니다. CSV 파일들은 같은 내용을 사람이 표로 확인하기 쉽게 나눈 버전입니다.
 
+## 먼저 알아야 할 점
+
+이 폴더의 데이터는 “분석을 다시 수행하기 위한 원천 데이터”가 아니라 “홈페이지와 검수 문서에서 바로 쓰기 위한 최종 정리 데이터”입니다.
+
+따라서 프론트엔드 개발자는 `web_payload.json`을 먼저 사용하면 되고, 기획자나 검수자는 같은 내용을 CSV로 열어 확인하면 됩니다. JSON과 CSV는 역할만 다를 뿐, 핵심 내용은 서로 맞춰져 있습니다.
+
+| 보고 싶은 것 | 먼저 볼 파일 | 이유 |
+| --- | --- | --- |
+| 홈페이지 전체 데이터를 한 번에 불러오기 | `web_payload.json` | 섹터, 정책 카드, 차트 데이터가 한 파일에 들어 있습니다. |
+| 정책 카드에 들어갈 문구 확인 | `policy_alignment_status.csv` | 정책명, 섹터, r, 정합 등급, 기사 수가 들어 있습니다. |
+| 정책 상세 차트 그리기 | `plot_series.csv` | 정책별 NLP 선과 CAR 선의 시계열 값이 들어 있습니다. |
+| 섹터 탭과 방법론 설명 만들기 | `sector_recipe.csv` | 섹터별 신호명과 lag 기준이 들어 있습니다. |
+| 분석 계산용 메타 확인 | `policy_alignment.csv` | 선택된 신호, lag, 주식그룹, r 계산 메타가 들어 있습니다. |
+
 ## `web_payload.json`
 
-프론트엔드에서 가장 먼저 확인할 통합 payload입니다.
+프론트엔드에서 가장 먼저 확인할 통합 payload입니다. 여기서 payload는 웹 화면이 한 번에 불러와 사용할 수 있도록 여러 데이터를 묶어둔 JSON 묶음이라는 뜻입니다.
 
 | 키 | 타입 | 설명 |
 | --- | --- | --- |
-| `meta` | object | 프로젝트명, 버전, 정책 수, 섹터 수 |
-| `sector_recipe` | array | 섹터별 NLP 신호 기준 |
-| `policy_alignment` | array | 정책별 정합 계산 메타 |
-| `policy_alignment_status` | array | 정책별 정합 판정 카드용 데이터 |
-| `plot_series` | array | 정책별 NLP/CAR 라인 차트 시계열 |
+| `meta` | object | 프로젝트명, 버전, 정책 수, 섹터 수 같은 전체 안내 정보입니다. 첫 화면 KPI를 만들 때 참고합니다. |
+| `sector_recipe` | array | 섹터별로 어떤 NLP 신호와 lag를 쓰는지 정리한 기준표입니다. 섹터 탭과 방법론 설명에 씁니다. |
+| `policy_alignment` | array | 정책별 정합 계산에 사용된 메타입니다. 상세 검수나 방법론 확인에 씁니다. |
+| `policy_alignment_status` | array | 정책 카드에 바로 넣기 좋은 데이터입니다. 정책명, r, 정합 등급, 기사 수가 포함됩니다. |
+| `plot_series` | array | 정책별 NLP/CAR 라인 차트 시계열입니다. 상세 화면의 이중축 차트를 그릴 때 씁니다. |
+
+가장 단순한 사용 방식은 다음과 같습니다.
+
+1. `web_payload.json`을 불러옵니다.
+2. `policy_alignment_status`로 정책 카드 목록을 만듭니다.
+3. 사용자가 정책 카드를 클릭하면 `policy_n`을 기준으로 `plot_series`를 필터링합니다.
+4. `kind`가 `nlp`인 행은 NLP 선으로, `kind`가 `car`인 행은 CAR 선으로 그립니다.
+5. 카드 하단에는 `r`, `alignment_status`, `alignment_grade`, `best_group`, `n_ptei`를 표시합니다.
 
 ## `policy_alignment_status.csv/json`
 
@@ -22,18 +44,30 @@
 
 | 컬럼 | 타입 | 설명 |
 | --- | --- | --- |
-| `policy_n` | integer | 정책 번호 |
-| `policy_code` | string | `P01` 형식 정책 코드 |
-| `policy_name` | string | 정책명 |
-| `sector` | string | 섹터명 |
-| `display_label` | string | 대외 표기용 NLP 신호명 |
-| `source` | string | 웹/API용 신호 코드 |
-| `lag` | integer | 섹터별 반응 지연일 |
-| `best_group` | string | 정합 기준으로 선택된 주식그룹 |
-| `r` | number | NLP 누적흐름과 CAR의 정합 상관계수 |
-| `alignment_status` | string | 방향 판정. 현재 공개 데이터는 전 정책 `방향 정합` |
-| `alignment_grade` | string | r 기준 정합 등급 |
-| `n_ptei` | integer | 정책별 기사 수 |
+| `policy_n` | integer | 정책 번호입니다. 차트 데이터와 연결할 때 사용하는 내부 기준입니다. |
+| `policy_code` | string | `P01` 형식의 화면 표시용 정책 코드입니다. 카드 제목 앞에 붙이면 됩니다. |
+| `policy_name` | string | 실제 정책명입니다. 사용자가 가장 먼저 보는 제목입니다. |
+| `sector` | string | 정책이 속한 산업 묶음입니다. 섹터 탭, 색상, 필터에 사용합니다. |
+| `display_label` | string | 대외 표기용 NLP 신호명입니다. 카드에서 “어떤 뉴스 신호를 봤는지” 설명할 때 씁니다. |
+| `source` | string | 개발/API용 신호 코드입니다. 화면에는 보통 `display_label`을 보여주는 것이 좋습니다. |
+| `lag` | integer | 뉴스 흐름과 주가 흐름을 비교할 때 적용한 시간 간격입니다. 단위는 일입니다. |
+| `best_group` | string | 여러 주식그룹 중 해당 정책의 NLP 흐름과 가장 잘 맞았던 그룹입니다. 수혜주 확정 목록이 아닙니다. |
+| `r` | number | NLP 누적흐름과 CAR 흐름이 얼마나 비슷하게 움직였는지 나타내는 상관계수입니다. |
+| `alignment_status` | string | 방향 판정입니다. 현재 공개 데이터는 전 정책 `방향 정합`입니다. |
+| `alignment_grade` | string | `r` 크기에 따른 정합 강도입니다. `강한 정합`, `높은 정합`, `보통 정합`, `약한 정합` 중 하나입니다. |
+| `n_ptei` | integer | 해당 정책 주변에서 분석에 사용한 기사 수입니다. 표본 규모를 보여줄 때 씁니다. |
+
+정책 카드에서는 아래처럼 조합하면 됩니다.
+
+```text
+{policy_code} {policy_name}
+{sector} · {display_label} · lag {lag}일
+{alignment_status} · {alignment_grade} · r={r}
+선택 주식그룹: {best_group}
+기사수: {n_ptei}
+```
+
+주의할 점은 `alignment_status`와 `alignment_grade`를 같은 뜻으로 쓰면 안 된다는 것입니다. `alignment_status`는 방향이고, `alignment_grade`는 강도입니다.
 
 ## `policy_alignment.csv/json`
 
@@ -41,17 +75,19 @@
 
 | 컬럼 | 설명 |
 | --- | --- |
-| `policy_n` | 정책 번호 |
-| `sector` | 섹터명 |
-| `source` | 대외 변환된 NLP 신호 코드 |
-| `span` | 일별 신호 산출 단위 |
-| `sign` | 적용 방향. 대외 산출물은 전 정책 `+1` |
-| `lag` | 섹터별 반응 지연일 |
-| `best_group` | 선택 주식그룹 |
-| `r` | 정합 상관계수 |
-| `mode` | 정합 모드 |
-| `n_ptei` | 기사 수 |
-| `display_label` | 대외 표기용 신호명 |
+| `policy_n` | 정책 번호입니다. `plot_series`와 연결할 때 기준이 됩니다. |
+| `sector` | 정책이 속한 섹터입니다. |
+| `source` | 분석에서 사용한 NLP 신호 코드입니다. 개발자가 로직을 확인할 때 씁니다. |
+| `span` | 일별 신호 산출 단위입니다. 정책 전후 날짜별 흐름을 만들기 위한 기준입니다. |
+| `sign` | 적용 방향입니다. 대외 산출물은 전 정책 `+1`입니다. 사후에 정책별 부호를 뒤집지 않았다는 뜻입니다. |
+| `lag` | 섹터별 반응 지연일입니다. |
+| `best_group` | 정합도가 가장 높게 나온 주식그룹입니다. |
+| `r` | NLP 흐름과 CAR 흐름의 정합 상관계수입니다. |
+| `mode` | 정합 계산 모드입니다. 검수나 재현성 확인용 메타로 보면 됩니다. |
+| `n_ptei` | 정책별 기사 수입니다. |
+| `display_label` | 화면에 보여줄 대외용 신호명입니다. |
+
+이 파일은 홈페이지 카드에는 꼭 필요하지 않을 수 있습니다. 하지만 “왜 이 정책에서 이 신호와 이 주식그룹이 선택됐는지”를 확인할 때 유용합니다.
 
 ## `sector_recipe.csv/json`
 
@@ -59,13 +95,15 @@
 
 | 컬럼 | 설명 |
 | --- | --- |
-| `sector` | 섹터명 |
-| `source` | 웹/API용 신호 코드 |
-| `label` | 대외 표기용 NLP 신호명 |
-| `span` | 신호 산출 단위 |
-| `lag` | 섹터 공통 반응 지연일 |
-| `n_policy` | 섹터 내 정책 수 |
-| `display_label` | UI 표시명 |
+| `sector` | 섹터명입니다. 탭 이름과 필터 이름으로 사용합니다. |
+| `source` | 섹터에서 사용하는 NLP 신호 코드입니다. |
+| `label` | 대외 표기용 NLP 신호명입니다. |
+| `span` | 신호 산출 단위입니다. |
+| `lag` | 섹터 공통 반응 지연일입니다. 해당 섹터 정책 카드에 표시할 수 있습니다. |
+| `n_policy` | 섹터 안에 포함된 정책 수입니다. 현재는 섹터별 10개입니다. |
+| `display_label` | UI 표시명입니다. `label`과 같은 용도로 화면에 보여주면 됩니다. |
+
+이 파일은 “반도체 탭에서는 어떤 신호명을 보여줄까?”, “금융/증권은 lag가 며칠인가?” 같은 화면 기준을 만들 때 씁니다.
 
 ## `plot_series.csv/json`
 
@@ -73,9 +111,11 @@
 
 | 컬럼 | 설명 |
 | --- | --- |
-| `policy_n` | 정책 번호 |
-| `kind` | `nlp` 또는 `car` |
-| `cal_day` | 정책일 D0 기준 상대일 |
-| `value` | 차트 값 |
+| `policy_n` | 정책 번호입니다. 사용자가 선택한 정책의 번호로 필터링합니다. |
+| `kind` | 선의 종류입니다. `nlp`는 뉴스 흐름, `car`는 주식 초과수익 흐름입니다. |
+| `cal_day` | 정책일 D0 기준 상대일입니다. `-30`은 정책 30일 전, `0`은 정책일, `30`은 정책 30일 후입니다. |
+| `value` | 차트에 그릴 값입니다. NLP와 CAR는 단위가 다르므로 보통 이중축 또는 정규화된 비교 차트로 보여줍니다. |
 
 프론트엔드에서는 `policy_n`과 `kind`로 필터링한 뒤 `cal_day` 기준으로 정렬하면 됩니다.
+
+차트를 읽을 때는 `value`의 절대 크기보다 선의 흐름을 봐야 합니다. NLP 값이 10이고 CAR 값이 0.02라고 해서 10이 더 크다는 식으로 비교하는 것이 아닙니다. 두 선이 시간에 따라 비슷한 방향으로 움직였는지를 보는 데이터입니다.
