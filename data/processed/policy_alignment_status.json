@@ -9,7 +9,7 @@
     "lag": 0,
     "best_group": "KOSPI·대기업",
     "r": 0.4182,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1050
   },
@@ -23,7 +23,7 @@
     "lag": 0,
     "best_group": "KOSPI·소기업",
     "r": 0.732,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1404
   },
@@ -37,7 +37,7 @@
     "lag": 0,
     "best_group": "KOSPI·중견",
     "r": 0.6318,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 5695
   },
@@ -51,7 +51,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·소기업",
     "r": 0.7917,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1413
   },
@@ -65,7 +65,7 @@
     "lag": 0,
     "best_group": "KOSPI·중견",
     "r": 0.7433,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1492
   },
@@ -79,7 +79,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·소기업",
     "r": 0.8493,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1803
   },
@@ -93,7 +93,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·대기업",
     "r": 0.6277,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1088
   },
@@ -107,7 +107,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·대기업",
     "r": 0.9415,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2232
   },
@@ -121,7 +121,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·소기업",
     "r": 0.6964,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1031
   },
@@ -135,7 +135,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·대기업",
     "r": 0.7523,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1326
   },
@@ -149,7 +149,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.6547,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1770
   },
@@ -163,7 +163,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.8331,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2150
   },
@@ -177,7 +177,7 @@
     "lag": 20,
     "best_group": "KOSPI·대기업",
     "r": 0.8916,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 3291
   },
@@ -191,7 +191,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·중견",
     "r": 0.819,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2354
   },
@@ -205,7 +205,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.4898,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 4335
   },
@@ -219,7 +219,7 @@
     "lag": 20,
     "best_group": "KOSPI·소기업",
     "r": 0.8054,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2342
   },
@@ -233,7 +233,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·중견",
     "r": 0.9578,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2684
   },
@@ -247,7 +247,7 @@
     "lag": 20,
     "best_group": "KOSPI·대기업",
     "r": 0.803,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1449
   },
@@ -261,7 +261,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.5666,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1441
   },
@@ -275,7 +275,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.4071,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1490
   },
@@ -289,7 +289,7 @@
     "lag": 0,
     "best_group": "KOSPI·중견",
     "r": 0.7485,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1519
   },
@@ -303,7 +303,7 @@
     "lag": 0,
     "best_group": "KOSPI·대기업",
     "r": 0.4394,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1008
   },
@@ -317,7 +317,7 @@
     "lag": 0,
     "best_group": "KOSPI·소기업",
     "r": 0.9589,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2383
   },
@@ -331,7 +331,7 @@
     "lag": 0,
     "best_group": "KOSPI·소기업",
     "r": 0.4843,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1142
   },
@@ -345,7 +345,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·중견",
     "r": 0.6134,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 2766
   },
@@ -359,7 +359,7 @@
     "lag": 0,
     "best_group": "KOSPI·중견",
     "r": 0.9347,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 2756
   },
@@ -373,7 +373,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·중견",
     "r": 0.5247,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1251
   },
@@ -387,7 +387,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·소기업",
     "r": 0.7761,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 2881
   },
@@ -401,7 +401,7 @@
     "lag": 0,
     "best_group": "KOSDAQ·소기업",
     "r": 0.7815,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1953
   },
@@ -415,7 +415,7 @@
     "lag": 0,
     "best_group": "KOSPI·대기업",
     "r": 0.9058,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 3294
   },
@@ -429,7 +429,7 @@
     "lag": 10,
     "best_group": "KOSPI·소기업",
     "r": 0.8239,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 3263
   },
@@ -443,7 +443,7 @@
     "lag": 10,
     "best_group": "KOSDAQ·소기업",
     "r": 0.8587,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 3755
   },
@@ -457,8 +457,8 @@
     "lag": 10,
     "best_group": "KOSPI·대기업",
     "r": 0.069,
-    "alignment_status": "정합 확인",
-    "alignment_grade": "기초 정합",
+    "alignment_status": "방향 정합",
+    "alignment_grade": "약한 정합",
     "n_ptei": 2101
   },
   {
@@ -471,7 +471,7 @@
     "lag": 10,
     "best_group": "KOSDAQ·대기업",
     "r": 0.6985,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 1460
   },
@@ -485,7 +485,7 @@
     "lag": 10,
     "best_group": "KOSPI·중견",
     "r": 0.9402,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 5598
   },
@@ -499,8 +499,8 @@
     "lag": 10,
     "best_group": "KOSDAQ·대기업",
     "r": 0.1221,
-    "alignment_status": "정합 확인",
-    "alignment_grade": "기초 정합",
+    "alignment_status": "방향 정합",
+    "alignment_grade": "약한 정합",
     "n_ptei": 2339
   },
   {
@@ -513,7 +513,7 @@
     "lag": 10,
     "best_group": "KOSPI·중견",
     "r": 0.8527,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1071
   },
@@ -527,7 +527,7 @@
     "lag": 10,
     "best_group": "KOSDAQ·소기업",
     "r": 0.7482,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 4519
   },
@@ -541,7 +541,7 @@
     "lag": 10,
     "best_group": "KOSDAQ·대기업",
     "r": 0.8451,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 8272
   },
@@ -555,7 +555,7 @@
     "lag": 10,
     "best_group": "KOSPI·대기업",
     "r": 0.6764,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "높은 정합",
     "n_ptei": 7044
   },
@@ -569,7 +569,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·소기업",
     "r": 0.9446,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 3942
   },
@@ -583,7 +583,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·소기업",
     "r": 0.9174,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1036
   },
@@ -597,7 +597,7 @@
     "lag": 20,
     "best_group": "KOSPI·소기업",
     "r": 0.9072,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1802
   },
@@ -611,7 +611,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.4685,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "보통 정합",
     "n_ptei": 1485
   },
@@ -625,7 +625,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·소기업",
     "r": 0.8426,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1204
   },
@@ -639,8 +639,8 @@
     "lag": 20,
     "best_group": "KOSPI·대기업",
     "r": 0.3057,
-    "alignment_status": "정합 확인",
-    "alignment_grade": "기초 정합",
+    "alignment_status": "방향 정합",
+    "alignment_grade": "약한 정합",
     "n_ptei": 1325
   },
   {
@@ -653,7 +653,7 @@
     "lag": 20,
     "best_group": "KOSDAQ·대기업",
     "r": 0.8391,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1145
   },
@@ -667,7 +667,7 @@
     "lag": 20,
     "best_group": "KOSPI·대기업",
     "r": 0.8372,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1407
   },
@@ -681,7 +681,7 @@
     "lag": 20,
     "best_group": "KOSPI·대기업",
     "r": 0.8464,
-    "alignment_status": "정합 확인",
+    "alignment_status": "방향 정합",
     "alignment_grade": "강한 정합",
     "n_ptei": 1229
   },
@@ -695,8 +695,8 @@
     "lag": 20,
     "best_group": "KOSDAQ·소기업",
     "r": 0.1834,
-    "alignment_status": "정합 확인",
-    "alignment_grade": "기초 정합",
+    "alignment_status": "방향 정합",
+    "alignment_grade": "약한 정합",
     "n_ptei": 5164
   }
 ]

@@ -29,7 +29,7 @@
 | `lag` | integer | 섹터별 반응 지연일 |
 | `best_group` | string | 정합 기준으로 선택된 주식그룹 |
 | `r` | number | NLP 누적흐름과 CAR의 정합 상관계수 |
-| `alignment_status` | string | 정합 판정 |
+| `alignment_status` | string | 방향 판정. 현재 공개 데이터는 전 정책 `방향 정합` |
 | `alignment_grade` | string | r 기준 정합 등급 |
 | `n_ptei` | integer | 정책별 기사 수 |
 
@@ -77,4 +77,3 @@
 | `value` | 차트 값 |
 
 프론트엔드에서는 `policy_n`과 `kind`로 필터링한 뒤 `cal_day` 기준으로 정렬하면 됩니다.
-

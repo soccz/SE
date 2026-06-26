@@ -49,6 +49,11 @@ def main() -> None:
         fail(f"sector_recipe rows expected 5, got {len(sector)}")
     if len(plot) != 7139:
         fail(f"plot_series rows expected 7139, got {len(plot)}")
+    if {row["alignment_status"] for row in status} != {"방향 정합"}:
+        fail("alignment_status should be '방향 정합' for the public package")
+    weak_count = sum(1 for row in status if row["alignment_grade"] == "약한 정합")
+    if weak_count != 4:
+        fail(f"weak alignment count expected 4, got {weak_count}")
 
     payload = json.loads((DATA / "web_payload.json").read_text(encoding="utf-8"))
     expected_keys = {
@@ -64,10 +69,14 @@ def main() -> None:
         fail("web_payload policy_alignment_status expected 50")
     if len(payload["plot_series"]) != 7139:
         fail("web_payload plot_series expected 7139")
+    first_status = payload["policy_alignment_status"][0]
+    if not isinstance(first_status["policy_n"], int):
+        fail("web_payload policy_alignment_status.policy_n should be numeric")
+    if not isinstance(first_status["r"], (int, float)):
+        fail("web_payload policy_alignment_status.r should be numeric")
 
     print("OK: data package is valid")
 
 
 if __name__ == "__main__":
     main()
-
